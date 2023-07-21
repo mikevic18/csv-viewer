@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Viewer</title>
+    <script src="https://kit.fontawesome.com/4becc50081.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">CSV Viewer</h1>
+        <div class="mt-3">
+          <button class="btn btn-primary" onclick="toggleView()">
+            <i class="fas fa-eye"></i> Toggle View
+          </button>
+        </div>
+        <div id="fileDropContainer" class="container">
+            <div class="row mt-5">
+              <div class="col-md-6 mx-auto">
+                <div class="drop-zone" id="csvFileDropZone">
+                  <i class="fas fa-cloud-upload-alt icon"></i>
+                  <div class="text">Drag and drop a CSV file here or click to upload</div>
+                </div>
+                <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+              </div>
+            </div>
+          </div>
+        <div id="csvContainer" class="mt-3">
+            <div class="table_head">
+                <h1 id="fileTitle" class="mb-7">Title Here</h1>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            <div id="csvTable">
+            </div>
+        </div>
+        <div id="jsonTable" class="mt-3">
+          <div class="table_head">
+              <h1>Student Information</h1>
+            </div>
+            <div id="tableContainer">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/jsonParsing.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
